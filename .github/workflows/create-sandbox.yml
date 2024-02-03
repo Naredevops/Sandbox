@@ -1,0 +1,20 @@
+name: Create Salesforce Sandbox
+
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  create-sandbox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Salesforce CLI
+        uses: salesforcecli/sfdx-cli-action@v1
+        with:
+          version: 'latest'
+
+      - name: Execute Script to Create Sandbox
+        run: bash path/to/create-sandbox.sh
