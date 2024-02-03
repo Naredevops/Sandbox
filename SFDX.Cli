@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Download Salesforce CLI Installer
+curl -o sfdx-install.sh https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-linux-x64.sh
+
+# Make the Script Executable
+chmod +x sfdx-install.sh
+
+# Run the Installer Script
+./sfdx-install.sh
+
+# Verify Installation
+sfdx --version
